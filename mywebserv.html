@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.colu1 {height: auto; width: auto;}		
+.colu2 { width: 48%; float: left;padding: 2px;}	
+.colu3 {width: 48%; float: left;padding: 2px;}		
+.h1 {text-align: center;}
+table {font-family: arial, sans-serif; width: 100%;}
+td, th {border: 1px solid #dddddd; text-align: left; padding: 8px;}
+tr:nth-child(even) {background-color: #dddddd;}
+</style>
+</head>
+<body>
+
+<div class="colu1">
+<div class = "h1">
+<h3>INTERNET OF THINGS PROJECT</h3>
+<h3>Covid-19 Doorway Security</h3>
+</div>
+<table>
+  <tr>
+    <th>Open Time</th>
+    <th>Close Time</th>
+	<th>MAX Number</th>
+	<th>Number of people inside now</th>
+	<th>Total Enter</th>
+	<th>Total Reject</th>
+	<th>Average Temp</th>
+  </tr>
+  <tr>
+    <td>09:00</td>
+    <td>17:00</td>
+    <td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+  </tr>
+  </table>
+  </div>
+<div class="colu2">
+<button type="button" onclick ="alert('It is device that take the temperature measuring with out touching the body and counting the number of people with and LCD screen to show up the result, and save the result in to database and web server.So the device measuring the temperature of the people before they entering any facility if the temperature is come up 38 degrees Celsius or more then that red light will show up and the person he/she not allowed to enter with message tell them in the LCD screen.otherwise checking the number of people inside the facility for the number limited inside the facility if there is no space inside the facility orange light and message will show up in the LCD screen description the time of waiting and the number of the people inside the facility.otherwise green light and message will show up in the LCD screen allow the person to enter the facility.')">What is Covid-19 Doorway Security</button>
+<br>
+<br>
+<button type="button" onclick="alert('During the time of covid-19 (pandemic) we see business and school shut down and life become hard and uncomfortable by another word the life had stop, that why I came up with TM&CD.The purpose of the device is to live with covid-19 and for our safety and health life without effect on the economic, education, mental health, and community.')">The Purpose</button>
+</div>
+<div class="colu3">
+<table>
+  <tr>
+    <th> 
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Hours', 'enter', 'reject'],
+          ['1th',  50,      4],
+          ['2th',  30,      3],
+          ['3th',  40,       5],
+          ['4th',  10,      1],
+		  ['5th',  15,      0],
+          ['6th',  25,      4],
+          ['7th',  55,       8],
+          ['8th',  4,      1],
+		  ['9th',  0,      0]
+        ]);
+
+        var options = {
+          title: 'Hourly Count',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 660px; height: 460px;"></div>
+	</th>
+  </tr>
+  </table>
+</div>
+</body>
+</html>
